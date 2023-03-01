@@ -1,2 +1,29 @@
 # reactNativeExpoApp
-tutorial to make react native app with expo typescript and tailwind
+how to make React Native app with expo typescript and tailwind(nativewind)
+
+## Creating a new project
+
+    Install globaly the CLI: npm i -g expo-cli
+    Create a project: npx create-expo-app -t expo-template-blank-typescript
+    cd into the project
+## Add tailwind(nativewind)
+	1. run npm i nativewind and then npm i --dev tailwindcss
+	2. run npx tailwindcss init
+		then change
+		- content: [],
+		+ content: ["./App.{js,jsx,ts,tsx}", "./<custom directory>/**/*.{js,jsx,ts,tsx}"],
+ 	3.add babel plugin
+ 		+   plugins: ["nativewind/babel"],
+	
+	4.add this line to src/tailwindcss-react-native.d.ts
+		/// <reference types="nativewind/types" />
+	5. Project is SetUp
+		now you can do <View className="flex-1 items-center justify-center bg-white"> 		and it should work
+
+## Adding TypeScript to existing projects
+
+    Create a blank TypeScript config: touch tsconfig.json
+    Run yarn start or npm run start to automatically configure TypeScript
+    Rename files to TypeScript, .tsx for React components and .ts for plain typescript files
+
+    bulb You can disable the TypeScript setup in Expo CLI with the environment variable EXPO_NO_TYPESCRIPT_SETUP=1 expo start
