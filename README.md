@@ -3,22 +3,25 @@ how to make React Native app with expo typescript and tailwind(nativewind)
 
 ## Creating a new project
 
-    Install globaly the CLI: npm i -g expo-cli
-    Create a project: npx create-expo-app -t expo-template-blank-typescript
-    cd into the project
+### Install globaly the CLI:
+    npm i -g expo-cli
+### Create a project: 
+npx create-expo-app -t expo-template-blank-typescript
+### cd into the project
 ## Add tailwind(nativewind)
-	1. run npm i nativewind and then npm i --dev tailwindcss
-	2. run npx tailwindcss init
-		then change
+ npm i nativewind
+ npm i --dev tailwindcss
+ npx tailwindcss init
+### 	then change babel.config.js(customize based on your directory
 		- content: [],
 		+ content: ["./App.{js,jsx,ts,tsx}", "./<custom directory>/**/*.{js,jsx,ts,tsx}"],
- 	3.add babel plugin
+### add babel plugin
  		+   plugins: ["nativewind/babel"],
 	
-	4.add this line to src/tailwindcss-react-native.d.ts
+### add this line to src/tailwindcss-react-native.d.ts
 		/// <reference types="nativewind/types" />
-	5. Project is SetUp
-		now you can do <View className="flex-1 items-center justify-center bg-white"> 		and it should work
+### Done🙂🙂,now you can use without errors
+		<View className="flex-1 items-center justify-center bg-white"> 		
 
 ## Adding TypeScript to existing projects
 
