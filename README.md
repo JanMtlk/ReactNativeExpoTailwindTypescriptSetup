@@ -6,7 +6,7 @@ how to make React Native app with expo typescript and tailwind(nativewind)
 ### Install globaly the CLI:
     npm i -g expo-cli
 ### Create a project: 
-npx create-expo-app -t expo-template-blank-typescript
+	npx create-expo-app -t expo-template-blank-typescript
 ### cd into the project
 ## Add tailwind(nativewind)
  npm i nativewind
